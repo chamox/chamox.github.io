@@ -31,13 +31,17 @@ const projects = [
 ]
 
 
+
+
 export default function ProjectsSection() {
   return (
     <section id="projects">
       <h1 className="my-10 text-center font-bold text-4xl">
         Projects
-        <hr className="w-6 h-1 mx-auto my-4 bg-teal-500 border-0 rounded"></hr>
+        <hr className="w-6 h-1 mx-auto my-4 bg-purple-700 border-0 rounded"></hr>
+        
       </h1>
+      
 
       <div className="flex flex-col space-y-28">
         {projects.map((project, idx) => {
@@ -84,6 +88,11 @@ export default function ProjectsSection() {
         })}
         
       </div>
+      <h1 className="my-20 text-center font-bold text-4xl">For more information, you can see my CV {" "}
+              
+              <span className="font-bold text-purple-700">
+              <a href="https://uccl0-my.sharepoint.com/:b:/g/personal/sezuniga1_uc_cl/EWvFuufW4FFAvaucnwBOXqYBPJcVwNIKBleFCVyH1br_BQ?e=b3JIls">here</a>
+              </span>{" "}.</h1>
     </section>
   )
 }

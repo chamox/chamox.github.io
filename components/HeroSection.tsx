@@ -13,7 +13,13 @@ export default function HeroSection() {
             </div>
             <div className="md:mt-2 md:w-3/5">
                 <h1 className="text-4xl font-bold mt-6 md:mt-0 md:text-7xl"> Hello, I'm Samuel!</h1>
-                <p className="text-lg mt-4 mb-6 md:text-2xl"> based in Santiago, CL. Working towards creating software that makes life easier and more meaningful</p>
+                <p className="text-lg mt-4 mb-6 md:text-2xl"> 
+                M name is Samuel and I am a{" "}
+                  <span className="font-bold">{"highly ambitious"}</span>,
+                  <span className="font-bold">{" self-motivated"}</span>, and
+                  <span className="font-bold">{" driven"}</span> software engineer
+                based in Santiago, Chile.
+                </p>
                 <Link
                 to="projects"
                 className="text-neutral-100 font-semibold px-6 py-3 bg-purple-800 rounded shadow hover:bg-purple-900"
