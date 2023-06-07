@@ -1,31 +1,32 @@
-import Image from "next/image"
+"use client";
+
+import Image from "next/legacy/image"
 import Link from "next/link"
 import SlideUp from "./SlideUp"
 import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs"
 
 const projects = [
   {
-    name: "Thankful Thoughts",
-    description:
-      "ThankfulThoughts is a web app that generates an appreciative sentence of something or someone you are thankful for.",
-    image: "/thankfulthoughts.png",
-    github: "https://github.com/hqasmei/thankful-thoughts",
-    link: "https://thankfulthoughts.io/",
+    name: "Python utilities",
+    description: "A small tutorial of how to get ride with pandas and numpy.",
+    image: "/data_analysis.jpg",
+    github: "https://github.com/chamox/python-utilities",
+    link: "https://github.com/chamox/python-utilities/blob/master/data-preprocessing/example.ipynb",
   },
   {
-    name: "PlatoIO",
-    description: "PlatoIO is a to do list app that built using the PERN stack.",
-    image: "/platoio.png",
+    name: "MetropolitanCare Inventory",
+    description: "A complete system to check ambulances inventory.",
+    image: "/metropolitan_care.jpg",
     github: "https://github.com/hqasmei/platoio",
     link: "https://platoio.com/register",
   },
   {
-    name: "Kator Family Photos",
+    name: "MyM8 app",
     description:
-      "Kator Family Photos is a photos and video digitization service in the LA area.",
-    image: "/familyphotos.png",
-    github: "https://github.com/hqasmei/katorfamilyphotos",
-    link: "https://katorfamilyphotos.com/",
+      "Connect with your future partners to create a startup.",
+    image: "/startup.png",
+    github: "",
+    link: "",
   },
 ]
 
@@ -44,17 +45,18 @@ export default function ProjectsSection() {
             <div key={idx}>
               <SlideUp offset="-300px 0px -300px 0px">
                 <div className="flex flex-col  animate-slideUpCubiBezier animation-delay-2 md:flex-row md:space-x-12">
-                  {/* <div className=" md:w-1/2">
+                  <div className=" md:w-1/2">
                     <Link href={project.link}>
                       <Image
                         src={project.image}
                         alt=""
-                        width={1000}
-                        height={1000}
+                        width={1080}
+                        height={720}
                         className="rounded-xl shadow-xl hover:opacity-70"
+                        priority={true}
                       />
                     </Link>
-                  </div> */}
+                  </div>
                   <div className="mt-8 md:w-1/2">
                     <h1 className="text-4xl font-bold mb-6">{project.name}</h1>
                     <p className="text-xl leading-7 mb-4 text-neutral-600 dark:text-neutral-400">
