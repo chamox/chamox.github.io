@@ -17,15 +17,15 @@ const projects = [
     name: "MetropolitanCare Inventory",
     description: "A complete system to check ambulances inventory.",
     image: "/metropolitan_care.jpg",
-    github: "https://github.com/hqasmei/platoio",
-    link: "https://platoio.com/register",
+    github: "https://github.com/chamox",
+    link: "",
   },
   {
     name: "MyM8 app",
     description:
       "Connect with your future partners to create a startup.",
     image: "/startup.png",
-    github: "",
+    github: "https://github.com/chamox",
     link: "",
   },
 ]
