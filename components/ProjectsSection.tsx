@@ -91,7 +91,7 @@ export default function ProjectsSection() {
       <h1 className="my-20 text-center font-bold text-4xl">For more information, you can see my CV {" "}
               
               <span className="font-bold text-purple-700">
-              <a href="https://uccl0-my.sharepoint.com/:b:/g/personal/sezuniga1_uc_cl/EWvFuufW4FFAvaucnwBOXqYBPJcVwNIKBleFCVyH1br_BQ?e=b3JIls">here</a>
+              <a href="https://uccl0-my.sharepoint.com/:b:/g/personal/sezuniga1_uc_cl/EWa194soleFFovgPnE2YM3UBoX7LmjeOdhAdxSAR6Kaxgg?e=9KQq7S">here</a>
               </span>{" "}.</h1>
     </section>
   )
