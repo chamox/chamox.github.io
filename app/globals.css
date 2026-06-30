@@ -10,17 +10,12 @@
 @layer base {
   html {
     color-scheme: light;
-    scroll-behavior: smooth;
   }
   html.dark {
     color-scheme: dark;
   }
-  /* Respect users who prefer less motion. */
-  @media (prefers-reduced-motion: reduce) {
-    html {
-      scroll-behavior: auto;
-    }
-  }
+  /* Smooth scrolling is handled in JS (SmoothAnchors); no CSS scroll-behavior so the
+     two don't fight and cause stutter. Reduced motion is also handled there. */
   /* Breathing room when an anchor jumps to a section. */
   [id] {
     scroll-margin-top: 2rem;

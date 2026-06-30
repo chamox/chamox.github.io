@@ -25,13 +25,14 @@ export default function SmoothAnchors() {
       history.pushState(null, '', hash)
 
       if (reduce) {
-        window.scrollTo(0, endY)
+        window.scrollTo({ top: endY, behavior: 'instant' })
         return
       }
       const start = performance.now()
       function step(now: number) {
         const p = Math.min((now - start) / DURATION, 1)
-        window.scrollTo(0, startY + (endY - startY) * easeInOutCubic(p))
+        // behavior:'instant' so CSS scroll-behavior can't re-smooth each step.
+        window.scrollTo({ top: startY + (endY - startY) * easeInOutCubic(p), behavior: 'instant' })
         if (p < 1) requestAnimationFrame(step)
       }
       requestAnimationFrame(step)
