@@ -1,5 +1,35 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
+/* Class-based dark mode: utilities prefixed `dark:` apply when <html class="dark">. */
+@custom-variant dark (&:where(.dark, .dark *));
 
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+    scroll-behavior: smooth;
+  }
+  html.dark {
+    color-scheme: dark;
+  }
+  /* Respect users who prefer less motion. */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+  /* Breathing room when an anchor jumps to a section. */
+  [id] {
+    scroll-margin-top: 2rem;
+  }
+  /* Outer margin color; the content panel (bg-white/zinc-900) sits on top of this. */
+  body {
+    @apply bg-zinc-50 font-sans text-zinc-600 antialiased dark:bg-black dark:text-zinc-400;
+  }
+  ::selection {
+    @apply bg-teal-500 text-white;
+  }
+}
