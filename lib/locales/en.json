@@ -1,0 +1,59 @@
+{
+  "nav": { "about": "About", "project": "Project", "contact": "Contact" },
+  "hero": {
+    "title": "Software engineer, gamer, and cueca dancer.",
+    "bio": "I’m Samuel, a Chilean software engineer in Santiago. I build web products people rely on, and lately I’ve been getting deep into AI and agents."
+  },
+  "about": {
+    "heading": "About",
+    "p1": "I studied Computer Science at Pontificia Universidad Católica de Chile and have built software across fintech, foodtech and now micromobility. Today I work remotely from Chile with Forest’s operations team in London, and I was lucky to visit the office once.",
+    "p2": "I really enjoy understanding how things are built, from new architectures and PWAs to Domain Driven Design, monorepos, and Vercel and its newer features like Workflows and Fluid Compute. Right now I’m especially into AI agents: how they work and how to use them well, and I’m always reading about where things are heading."
+  },
+  "interests": {
+    "heading": "Interests",
+    "items": ["Artificial intelligence", "AI agents", "Algorithms", "Cryptography", "Data science", "Statistics", "Data visualization", "Investing"]
+  },
+  "stack": { "heading": "Stack" },
+  "beyond": {
+    "heading": "Beyond work",
+    "items": ["Folklore", "Music", "Gaming", "Hiking", "Cycling", "Anime", "Japanese culture"]
+  },
+  "experience": {
+    "heading": "Experience",
+    "items": [
+      { "org": "Forest", "role": "Software Engineer · London", "period": "2024 – Present", "current": true, "description": "Building the app behind an e-bike operation in London, the biggest e-bike market in the world, working day to day with the operations team to keep the fleet running." },
+      { "org": "Okane Capital", "role": "Software Engineer · Santiago", "period": "2023 – 2024", "description": "Frontend development of internal platforms for a crypto arbitrage fintech. Technologies used were Vue.js, Nuxt and Tailwind." },
+      { "org": "NotCo", "role": "Software Engineer Intern · Chile", "period": "2023", "description": "Development of platforms to facilitate the multidisciplinary work of food scientists. Technologies used were Vue.js, Python and GraphQL." },
+      { "org": "BLISSWAY", "role": "IT Consultant · Denver, USA", "period": "2022", "description": "Review of photographic data for the recognition of vehicles and their license plates. Python and React were used for data management." },
+      { "org": "Buk Chile", "role": "Software Engineer Intern · Chile", "period": "2022", "description": "Implementation of a new notification system in Ruby on Rails and Vue.js with the compensation team." },
+      { "org": "Facebook", "role": "Technical Mentorship Programme · Mentee", "period": "2021", "description": "A mentorship program focused on algorithms, teamwork and software engineering, covering front and production engineering concepts and how to approach technical interviews." }
+    ]
+  },
+  "github": {
+    "heading": "GitHub",
+    "label": "{{count}} contributions in the last year",
+    "on": "on", "none": "No", "one": "contribution", "many": "contributions", "less": "Less", "more": "More",
+    "months": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    "weekdays": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+  },
+  "education": {
+    "heading": "Education",
+    "school": "Pontificia Universidad Católica de Chile",
+    "degree": "Bachelor of Engineering, Computer Science · 2016 – 2022",
+    "major": "Major in Software Engineering",
+    "minor": "Minor in Data Science and Analytics"
+  },
+  "contact": {
+    "heading": "Get in touch",
+    "body": "Have a project or role in mind? I’m open to new opportunities.",
+    "cv": "View CV"
+  },
+  "project": {
+    "heading": "Project",
+    "status": "In production",
+    "description": "An accreditation and document-compliance platform for events in Chile, used by the Festival de Viña del Mar, Latin America’s largest music festival, and by production companies like Bizarro and Street Machine. It manages the documentation of hundreds of workers: companies upload the papers for their workers and vehicles, and reviewers approve them against sector requirements, with role-based access for admins, reviewers and providers. It is built for non-technical users, so it works without training.",
+    "tech": "Next.js · Supabase · TypeScript",
+    "visit": "Visit"
+  },
+  "footer": { "madeWith": "Made with", "by": "by" }
+}

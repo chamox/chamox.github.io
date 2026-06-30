@@ -14,8 +14,7 @@
   html.dark {
     color-scheme: dark;
   }
-  /* Smooth scrolling is handled in JS (SmoothAnchors); no CSS scroll-behavior so the
-     two don't fight and cause stutter. Reduced motion is also handled there. */
+  /* Smooth anchor scrolling handled in JS (SmoothAnchors) with custom easing. */
   /* Breathing room when an anchor jumps to a section. */
   [id] {
     scroll-margin-top: 2rem;
@@ -26,5 +25,16 @@
   }
   ::selection {
     @apply bg-teal-500 text-white;
+  }
+  /* Faster taps on mobile (no 300ms double-tap delay) for all interactive elements. */
+  :where(a, button) {
+    touch-action: manipulation;
+  }
+  /* Visible keyboard focus on every link/button (a11y). Low specificity so it never
+     fights component styles; only shows on keyboard nav via :focus-visible. */
+  :where(a, button):focus-visible {
+    outline: 2px solid var(--color-teal-500);
+    outline-offset: 2px;
+    border-radius: 2px;
   }
 }

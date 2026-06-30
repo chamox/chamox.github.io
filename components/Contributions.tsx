@@ -1,32 +1,29 @@
 'use client'
 
-import { cloneElement, useSyncExternalStore } from 'react'
+import { cloneElement } from 'react'
 import { ActivityCalendar } from 'react-activity-calendar'
 import { Tooltip } from 'react-tooltip'
+import 'react-tooltip/dist/react-tooltip.css'
 import contributions from '@/data/contributions.json'
-
-// Follow the site's class-based dark mode (re-render when <html class> changes).
-const subscribe = (cb: () => void) => {
-  const obs = new MutationObserver(cb)
-  obs.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] })
-  return () => obs.disconnect()
-}
-const isDark = () => document.documentElement.classList.contains('dark')
-
-const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-const fmtDate = (iso: string) => {
-  const [y, m, d] = iso.split('-')
-  return `${MONTHS[Number(m) - 1]} ${Number(d)}, ${y}`
-}
+import { useDict, useLang } from '@/lib/lang'
+import { useDark } from '@/lib/theme'
 
 export default function Contributions() {
-  const dark = useSyncExternalStore(subscribe, isDark, () => false)
+  const dark = useDark()
+  const t = useDict()
+  const lang = useLang()
   if (!contributions.days?.length) return null
 
+  const fmtDate = (iso: string) => {
+    const [y, m, d] = iso.split('-')
+    const month = t.github.months[Number(m) - 1]
+    return lang === 'es' ? `${Number(d)} ${month} ${y}` : `${month} ${Number(d)}, ${y}`
+  }
+
   return (
-    <section className="mt-16">
-      <h2 className="text-sm font-semibold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">
-        GitHub
+    <section>
+      <h2 className="text-sm font-semibold uppercase tracking-wider text-teal-600 dark:text-teal-400">
+        {t.github.heading}
       </h2>
       <div className="mt-5 flex justify-start overflow-x-auto pb-1 lg:justify-center">
         <ActivityCalendar
@@ -40,15 +37,22 @@ export default function Contributions() {
           blockMargin={3}
           fontSize={13}
           showWeekdayLabels
-          labels={{ totalCount: '{{count}} contributions in the last year' }}
-          renderBlock={(block, activity) =>
-            cloneElement(block, {
+          labels={{
+            totalCount: t.github.label,
+            months: t.github.months,
+            weekdays: t.github.weekdays,
+            legend: { less: t.github.less, more: t.github.more },
+          }}
+          renderBlock={(block, activity) => {
+            const count =
+              activity.count === 0
+                ? `${t.github.none} ${t.github.many}`
+                : `${activity.count} ${activity.count === 1 ? t.github.one : t.github.many}`
+            return cloneElement(block, {
               'data-tooltip-id': 'gh-tooltip',
-              'data-tooltip-content': `${activity.count === 0 ? 'No' : activity.count} contribution${
-                activity.count === 1 ? '' : 's'
-              } on ${fmtDate(activity.date)}`,
+              'data-tooltip-content': `${count} ${t.github.on} ${fmtDate(activity.date)}`,
             })
-          }
+          }}
         />
         <Tooltip id="gh-tooltip" />
       </div>

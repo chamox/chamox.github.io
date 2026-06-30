@@ -1,0 +1,59 @@
+{
+  "nav": { "about": "Sobre mí", "project": "Proyecto", "contact": "Contacto" },
+  "hero": {
+    "title": "Ingeniero de software, gamer y bailarín de cueca.",
+    "bio": "Soy Samuel, ingeniero de software chileno en Santiago. Construyo productos web en los que la gente confía, y últimamente me he metido de lleno en la IA y los agentes."
+  },
+  "about": {
+    "heading": "Sobre mí",
+    "p1": "Estudié Ingeniería en Computación en la Pontificia Universidad Católica de Chile y he construido software en fintech, foodtech y ahora micromovilidad. Hoy trabajo de forma remota desde Chile con el equipo de operaciones de Forest en Londres, y tuve la suerte de visitar la oficina una vez.",
+    "p2": "Disfruto entender cómo se construyen las cosas, desde nuevas arquitecturas y PWAs hasta Domain Driven Design, monorepos, y Vercel y sus nuevas features como Workflows y Fluid Compute. Ahora estoy especialmente metido en los agentes de IA: cómo funcionan y cómo usarlos bien, y siempre estoy leyendo hacia dónde van las tendencias."
+  },
+  "interests": {
+    "heading": "Intereses",
+    "items": ["Inteligencia artificial", "Agentes de IA", "Algoritmos", "Criptografía", "Ciencia de datos", "Estadística", "Visualización de datos", "Inversiones"]
+  },
+  "stack": { "heading": "Stack" },
+  "beyond": {
+    "heading": "Fuera del trabajo",
+    "items": ["Folclore", "Música", "Gaming", "Senderismo", "Ciclismo", "Anime", "Cultura japonesa"]
+  },
+  "experience": {
+    "heading": "Experiencia",
+    "items": [
+      { "org": "Forest", "role": "Ingeniero de Software · Londres", "period": "2024 – Presente", "current": true, "description": "Construyendo la app detrás de una operación de e-bikes en Londres, el mercado de e-bikes más grande del mundo, trabajando día a día con el equipo de operaciones para mantener la flota en marcha." },
+      { "org": "Okane Capital", "role": "Ingeniero de Software · Santiago", "period": "2023 – 2024", "description": "Desarrollo frontend de plataformas internas para una fintech de arbitraje de criptomonedas. Las tecnologías usadas fueron Vue.js, Nuxt y Tailwind." },
+      { "org": "NotCo", "role": "Práctica de Ingeniería de Software · Chile", "period": "2023", "description": "Desarrollo de plataformas para facilitar el trabajo multidisciplinario de científicos de alimentos. Las tecnologías usadas fueron Vue.js, Python y GraphQL." },
+      { "org": "BLISSWAY", "role": "Consultor TI · Denver, EE. UU.", "period": "2022", "description": "Revisión de datos fotográficos para el reconocimiento de vehículos y sus patentes. Se usó Python y React para la gestión de datos." },
+      { "org": "Buk Chile", "role": "Práctica de Ingeniería de Software · Chile", "period": "2022", "description": "Implementación de un nuevo sistema de notificaciones en Ruby on Rails y Vue.js con el equipo de compensaciones." },
+      { "org": "Facebook", "role": "Programa de Mentoría Técnica · Mentee", "period": "2021", "description": "Un programa de mentoría enfocado en algoritmos, trabajo en equipo e ingeniería de software, cubriendo conceptos de front y production engineering y cómo abordar entrevistas técnicas." }
+    ]
+  },
+  "github": {
+    "heading": "GitHub",
+    "label": "{{count}} contribuciones en el último año",
+    "on": "el", "none": "Sin", "one": "contribución", "many": "contribuciones", "less": "Menos", "more": "Más",
+    "months": ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"],
+    "weekdays": ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"]
+  },
+  "education": {
+    "heading": "Educación",
+    "school": "Pontificia Universidad Católica de Chile",
+    "degree": "Bachiller en Ingeniería, Ciencia de la Computación · 2016 – 2022",
+    "major": "Mención en Ingeniería de Software",
+    "minor": "Minor en Ciencia de Datos y Analytics"
+  },
+  "contact": {
+    "heading": "Hablemos",
+    "body": "¿Tienes un proyecto o un rol en mente? Estoy abierto a nuevas oportunidades.",
+    "cv": "Ver CV"
+  },
+  "project": {
+    "heading": "Proyecto",
+    "status": "En producción",
+    "description": "Una plataforma de acreditación y cumplimiento documental para eventos en Chile, usada por el Festival de Viña del Mar, el festival de música más grande de Hispanoamérica, y por productoras como Bizarro y Street Machine. Gestiona la documentación de cientos de trabajadores: las empresas suben los papeles de sus trabajadores y vehículos, y los revisores los aprueban según los requisitos de cada sector, con accesos por rol para administradores, revisores y proveedores. Está pensada para usuarios no técnicos, así que funciona sin necesidad de capacitación.",
+    "tech": "Next.js · Supabase · TypeScript",
+    "visit": "Visitar"
+  },
+  "footer": { "madeWith": "Hecho con", "by": "por" }
+}
