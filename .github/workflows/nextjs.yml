@@ -4,6 +4,9 @@ on:
   push:
     branches: ["main"]
   workflow_dispatch:
+  schedule:
+    # Refresh the GitHub contributions graph daily.
+    - cron: "0 6 * * *"
 
 permissions:
   contents: read
@@ -31,6 +34,12 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+      - name: Refresh GitHub contributions
+        run: node scripts/fetch-contributions.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # If the refresh fails, keep the last committed data instead of breaking deploy.
+        continue-on-error: true
       - name: Build with Next.js
         run: pnpm build
       - name: Upload artifact

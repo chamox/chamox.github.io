@@ -1,7 +1,9 @@
 import Image from 'next/image'
 import { FiGithub, FiLinkedin, FiMail, FiArrowUpRight } from 'react-icons/fi'
 import { HiOutlineAcademicCap } from 'react-icons/hi2'
+import { FaHeart } from 'react-icons/fa'
 import ThemeToggle from '@/components/ThemeToggle'
+import Contributions from '@/components/Contributions'
 
 const CV_URL = 'https://www.linkedin.com/in/samuel-zuniga-avila/'
 const MAFO_URL = 'https://mafo-app-nine.vercel.app'
@@ -15,12 +17,18 @@ const socials = [
 const interests = [
   'Artificial intelligence',
   'AI agents',
+  'Algorithms',
   'Cryptography',
+  'Data science',
+  'Statistics',
+  'Data visualization',
   'Investing',
   'Technology',
   'Gaming',
   'Hiking',
   'Cycling',
+  'Anime',
+  'Japanese culture',
 ]
 
 const stack = [
@@ -149,15 +157,27 @@ export default function Home() {
 
         <div className="mx-auto max-w-5xl px-6 pb-20 sm:px-8 lg:px-12">
           {/* Intro */}
-          <section className="max-w-2xl pt-16 sm:pt-24">
-            <h1 className="text-4xl font-bold tracking-tight text-zinc-900 sm:text-5xl dark:text-zinc-100">
-              Software engineer, gamer, and cueca dancer.
-            </h1>
-            <p className="mt-6 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
-              My name is Samuel and I&rsquo;m a software engineer based in Santiago,
-              Chile. I love building products that people actually use, and lately
-              I&rsquo;ve been getting deep into AI and building with agents.
-            </p>
+          <section className="pt-16 sm:pt-24">
+            <div className="flex flex-col gap-10 sm:flex-row sm:items-center sm:justify-between">
+              <div className="max-w-2xl">
+                <h1 className="text-4xl font-bold tracking-tight text-zinc-900 sm:text-5xl dark:text-zinc-100">
+                  Software engineer, gamer, and cueca dancer.
+                </h1>
+                <p className="mt-6 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+                  My name is Samuel and I&rsquo;m a Chilean software engineer based in
+                  Santiago. I love building products that people actually use, and lately
+                  I&rsquo;ve been getting deep into AI and building with agents.
+                </p>
+              </div>
+              <Image
+                src="/profile_photo.webp"
+                alt="Samuel Zúñiga"
+                width={440}
+                height={440}
+                priority
+                className="aspect-[4/5] w-40 shrink-0 rotate-3 rounded-2xl object-cover ring-1 ring-zinc-200 sm:w-44 lg:w-48 dark:ring-zinc-800"
+              />
+            </div>
           </section>
 
           {/* About (full width) */}
@@ -165,14 +185,7 @@ export default function Home() {
             <h2 className="text-sm font-semibold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">
               About
             </h2>
-            <div className="mt-6 flow-root space-y-6 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
-              <Image
-                src="/profile_photo.webp"
-                alt="Samuel Zúñiga"
-                width={440}
-                height={440}
-                className="float-right ml-8 mb-2 aspect-[4/5] w-32 rotate-3 rounded-2xl object-cover ring-1 ring-zinc-200 sm:w-44 dark:ring-zinc-800"
-              />
+            <div className="mt-6 space-y-6 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
               <p>
                 I studied Computer Science at Pontificia Universidad Católica de Chile,
                 and I have worked across fintech, foodtech and now micromobility. These
@@ -189,7 +202,8 @@ export default function Home() {
               <p>
                 Outside of work I&rsquo;m passionate about cueca, the traditional Chilean
                 folk dance, and I love gaming, mostly CS2, Minecraft and Tibia. I also
-                enjoy cycling and hiking the hills of Santiago. 🤠
+                enjoy cycling, hiking the hills of Santiago, and I&rsquo;m really into
+                anime and Japanese culture. 🤠
               </p>
             </div>
 
@@ -249,6 +263,9 @@ export default function Home() {
               ))}
             </ul>
           </section>
+
+          {/* GitHub contributions */}
+          <Contributions />
 
           {/* Education + Contact */}
           <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -341,8 +358,21 @@ export default function Home() {
         </div>
 
         {/* Footer */}
-        <footer className="border-t border-zinc-200 px-6 py-8 text-sm text-zinc-500 sm:px-8 lg:px-12 dark:border-zinc-800">
-          © {new Date().getFullYear()} Samuel Zúñiga
+        <footer className="border-t border-zinc-200 px-6 py-8 text-center text-sm text-zinc-500 sm:px-8 lg:px-12 dark:border-zinc-800">
+          <p className="inline-flex items-center gap-1.5">
+            Made with
+            <FaHeart size={12} className="text-teal-500 dark:text-teal-400" />
+            by
+            <a
+              href="https://github.com/chamox"
+              target="_blank"
+              rel="noreferrer"
+              className="font-medium text-zinc-600 transition hover:text-teal-500 dark:text-zinc-400 dark:hover:text-teal-400"
+            >
+              chamox
+            </a>
+          </p>
+          <p className="mt-1">© {new Date().getFullYear()} Samuel Zúñiga</p>
         </footer>
       </div>
     </div>
