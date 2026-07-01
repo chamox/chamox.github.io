@@ -6,7 +6,7 @@ export type Lang = 'en' | 'es'
 // Language-neutral data (shared across locales).
 export const STACK = [
   'TypeScript', 'JavaScript', 'Python', 'Ruby on Rails', 'React', 'Next.js',
-  'Vue', 'Nuxt', 'Nitro', 'Node.js', 'Tailwind CSS', 'Supabase',
+  'Vue', 'Nuxt', 'Nuxt UI', 'Nitro', 'Node.js', 'Tailwind CSS', 'Supabase',
   'PostgreSQL', 'Vercel', 'AWS', 'Git',
 ]
 

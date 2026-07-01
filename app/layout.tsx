@@ -6,7 +6,7 @@ import SmoothAnchors from '@/components/SmoothAnchors'
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://chamox.github.io'),
+  metadataBase: new URL('https://chamox.dev'),
   title: 'Samuel Zúñiga · Software Engineer',
   description:
     'Software engineer in Santiago, Chile, building web products and AI agent systems.',
