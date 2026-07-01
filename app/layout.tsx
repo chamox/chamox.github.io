@@ -15,11 +15,13 @@ export const metadata: Metadata = {
     title: 'Samuel Zúñiga',
     description: 'Chilean software engineer based in Santiago, building web products and exploring agentic AI.',
     type: 'website',
+    images: '/og.png',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Samuel Zúñiga',
     description: 'Chilean software engineer based in Santiago, building web products and exploring agentic AI.',
+    images: '/og.png',
   },
 }
 
