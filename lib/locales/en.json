@@ -2,12 +2,12 @@
   "nav": { "about": "About", "project": "Project", "contact": "Contact" },
   "hero": {
     "title": "Software engineer, gamer, and cueca dancer.",
-    "bio": "I’m Samuel, a Chilean software engineer in Santiago. I build web products people rely on, and lately I’ve been getting deep into AI and agents."
+    "bio": "I’m Samuel, a Chilean software engineer based in Santiago. I like building web products and, lately, getting into agentic AI. I’m also a Bitcoin enthusiast."
   },
   "about": {
     "heading": "About",
-    "p1": "I studied Computer Science at Pontificia Universidad Católica de Chile and have built software across fintech, foodtech and now micromobility. Today I work remotely from Chile with Forest’s operations team in London, and I was lucky to visit the office once.",
-    "p2": "I really enjoy understanding how things are built, from new architectures and PWAs to Domain Driven Design, monorepos, and Vercel and its newer features like Workflows and Fluid Compute. Right now I’m especially into AI agents: how they work and how to use them well, and I’m always reading about where things are heading."
+    "p1": "I studied Computer Science at Pontificia Universidad Católica de Chile and have built software across fintech, foodtech and now micromobility. Today I work remotely from Chile with Forest’s operations team in London.",
+    "p2": "I like studying how things work and keeping up with the latest, from reading programming blogs to following trends in architecture, PWAs, Domain Driven Design and monorepos. I also really enjoy the Vercel ecosystem and have experience building on it. Most of all, I’m interested in bringing AI into how teams work, and I like contributing so that everyone, even non-devs, can make the most of it."
   },
   "interests": {
     "heading": "Interests",
@@ -51,7 +51,7 @@
   "project": {
     "heading": "Project",
     "status": "In production",
-    "description": "An accreditation and document-compliance platform for events in Chile, used by the Festival de Viña del Mar, Latin America’s largest music festival, and by production companies like Bizarro and Street Machine. It manages the documentation of hundreds of workers: companies upload the papers for their workers and vehicles, and reviewers approve them against sector requirements, with role-based access for admins, reviewers and providers. It is built for non-technical users, so it works without training.",
+    "description": "An accreditation and document-compliance platform for events in Chile, used by the Festival de Viña del Mar, Latin America’s largest music festival, and by production companies like Bizarro and Street Machine. It handles the paperwork of hundreds of workers with a deliberately simple UX, designed for non-technical users so it works without any training.",
     "tech": "Next.js · Supabase · TypeScript",
     "visit": "Visit"
   },
