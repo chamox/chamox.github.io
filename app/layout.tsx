@@ -9,12 +9,17 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://chamox.dev'),
   title: 'Samuel Zúñiga · Software Engineer',
   description:
-    'Software engineer in Santiago, Chile, building web products and AI agent systems.',
+    'Chilean software engineer based in Santiago, building web products and exploring agentic AI.',
   icons: { icon: '/favicon.svg' },
   openGraph: {
     title: 'Samuel Zúñiga',
-    description: 'Software engineer building web products and AI agent systems.',
+    description: 'Chilean software engineer based in Santiago, building web products and exploring agentic AI.',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Samuel Zúñiga',
+    description: 'Chilean software engineer based in Santiago, building web products and exploring agentic AI.',
   },
 }
 
